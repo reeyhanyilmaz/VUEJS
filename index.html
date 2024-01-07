@@ -13,11 +13,13 @@
       <!-- degiskenler {{}} buraya yazılır -->
 
       <!-- binding -->
+
       <p><a :href="website">Websitemmm</a></p>
       <input type="text" :value="name" />
       <p v-html="aTag"></p>
 
       <!-- events -->
+
       <button v-on:click="number++">+</button>
       <p>{{number}}</p>
       <button v-on:click="number--">-</button>
@@ -31,8 +33,18 @@
       <button v-on:click="extractionTen(10)">extraction 10 num</button>
 
       <!-- mouse events -->
+
+      <hr />
       <p>{{number}}</p>
       <div id="canvas" v-on:mousemove="updateCoordinates">EVENTS {{X}} , {{Y}}</div>
+      <hr />
+      <!-- events modifier -->
+
+      <button v-on:click.once="number++">+</button>
+      <!-- ONCE bir kere tıklamaya izin verir -->
+      <hr />
+      <a v-on:click.prevent="alertFunc" href="https://reyhanyilmaz.vercel.app/">event modifier a tag</a>
+      <!-- prevent sayfaya gitmeyi engeller burada -->
     </div>
   </body>
   <script src="app.js"></script>

@@ -25,11 +25,16 @@ createApp({
     extractionTen: function (num) {
       this.number -= num;
     },
-    // böylede func yazılır
+    // böylede func yazılır,
+    // mouse event
     updateCoordinates(event) {
       console.log("event :>> ", event);
       this.X = event.offsetX;
       this.Y = event.offsetY;
+    },
+    // event modifier
+    alertFunc() {
+      alert("Clicked!");
     },
   },
 }).mount("#app");
