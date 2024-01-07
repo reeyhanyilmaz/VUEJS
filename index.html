@@ -16,6 +16,23 @@
       <p><a :href="website">Websitemmm</a></p>
       <input type="text" :value="name" />
       <p v-html="aTag"></p>
+
+      <!-- events -->
+      <button v-on:click="number++">+</button>
+      <p>{{number}}</p>
+      <button v-on:click="number--">-</button>
+      <hr />
+      <button v-on:click="increase">Func. +</button>
+      <p>{{number}}</p>
+      <button v-on:click="decrease">Func. -</button>
+
+      <hr />
+      <button v-on:click="addTen(10)">add 10 num</button>
+      <button v-on:click="extractionTen(10)">extraction 10 num</button>
+
+      <!-- mouse events -->
+      <p>{{number}}</p>
+      <div id="canvas" v-on:mousemove="updateCoordinates">EVENTS {{X}} , {{Y}}</div>
     </div>
   </body>
   <script src="app.js"></script>
