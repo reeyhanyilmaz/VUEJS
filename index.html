@@ -45,6 +45,17 @@
       <hr />
       <a v-on:click.prevent="alertFunc" href="https://reyhanyilmaz.vercel.app/">event modifier a tag</a>
       <!-- prevent sayfaya gitmeyi engeller burada -->
+
+      <!-- state -->
+
+      <hr />
+      <label for="">Name</label>
+      <input type="text" v-model="name_2" />
+      <!-- v-model state gibi veriyi degiskene atıyor -->
+      <p>{{name_2}}</p>
+      <label for="">Age</label>
+      <input type="text" v-model="age" />
+      <p>{{age}}</p>
     </div>
   </body>
   <script src="app.js"></script>

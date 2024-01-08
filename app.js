@@ -8,6 +8,8 @@ createApp({
       number: 10,
       X: 0,
       Y: 0,
+      name_2: "",
+      age: "",
     };
   },
   //   function
