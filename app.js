@@ -10,6 +10,9 @@ createApp({
       Y: 0,
       name_2: "",
       age: "",
+      // computed properties
+      a: 0,
+      b: 0,
     };
   },
   //   function
@@ -37,6 +40,29 @@ createApp({
     // event modifier
     alertFunc() {
       alert("Clicked!");
+    },
+
+    //computed properties
+    aYaEkle: function () {
+      console.log("A kontrol edildi");
+      return this.a + this.age;
+    },
+    bYeEkle: function () {
+      console.log("B kontrol edildi");
+      return this.b + this.age;
+    },
+  },
+  //vue js her değisimde kontrol etmesin sadece degisen degiskeni kontrol etsin diye computed kulllanıyoruz.
+  // methods kısmında yazdıgımızda a degisse bile b'yide konttol ediyordu ve html kısmında () böyle calıstıyoruyoz.
+  // Ancak Computed ile sadece func. ismi yazılır
+  computed: {
+    aYaEkle: function () {
+      console.log("A kontrol edildi");
+      return this.a + this.age;
+    },
+    bYeEkle: function () {
+      console.log("B kontrol edildi");
+      return this.b + this.age;
     },
   },
 }).mount("#app");
