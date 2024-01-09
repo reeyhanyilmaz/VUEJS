@@ -74,6 +74,16 @@
         <!-- on click'de bir func islemi, class'da deger verildi ve {} icine yazilmali -->
         <span>Bu alanın içeriğidir. </span>
       </div>
+
+      <!-- ******************  CONDITION ****************** -->
+      <hr />
+      <button v-on:click="error=!error">Error button</button>
+      <p v-if="error">Error true</p>
+      <!-- v-if DOM'a olustuyor true ise false ise DOM'dan kaldırıyor -->
+      <!-- else ise "v-else-if" seklinde yazilir -->
+      <p v-show="error">v-show</p>
+      <!-- error true ise v-show ögesi görünür false ise görünmez -->
+      <!-- ama DOM'da vardır "display: none", seklinde görünür. if ise DOM'dan silinip dahil olur -->
     </div>
   </body>
   <script src="app.js"></script>

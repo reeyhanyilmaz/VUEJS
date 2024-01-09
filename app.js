@@ -15,6 +15,8 @@ createApp({
       b: 0,
       //css
       activity: true,
+      //condition
+      error: false,
     };
   },
   //   function
