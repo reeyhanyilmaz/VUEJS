@@ -17,6 +17,13 @@ createApp({
       activity: true,
       //condition
       error: false,
+      //array , objects
+      items: ["A", "B", "C", "D"],
+      properties: [
+        { name: "Reyhan", age: 20 },
+        { name: "Veli", age: 21 },
+        { name: "Ali", age: 22 },
+      ],
     };
   },
   //   function

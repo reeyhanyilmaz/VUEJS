@@ -84,6 +84,32 @@
       <p v-show="error">v-show</p>
       <!-- error true ise v-show ögesi görünür false ise görünmez -->
       <!-- ama DOM'da vardır "display: none", seklinde görünür. if ise DOM'dan silinip dahil olur -->
+
+      <!-- ****************** ARRAY, OBJECT  ****************** -->
+      <hr />
+      <li v-for="item in items">{{item}}</li>
+      <li v-for="property in properties">{{property.name}}</li>
+      <li v-for="(property, index) in properties">{{index}}-{{property.name}}</li>
+      <hr />
+      <!-- template -->
+      <div v-for="(property, index) in properties">
+        <h3>{{ index }}. {{ property.name }}</h3>
+        <p>{{ property.age }}</p>
+      </div>
+      <hr />
+      <!-- template'de template DOM'da görünmez sadece icindekiş ogeler görünür -->
+      <template v-for="(property, index) in properties">
+        <h3>{{ index }}. {{ property.name }}</h3>
+        <p>{{ property.age }}</p>
+      </template>
+
+      <!-- key val -->
+      <hr />
+      <template v-for="(property, index) in properties">
+        <div v-for="(val,key) in property">
+          <h3>{{ key}}: {{ val}}</h3>
+        </div>
+      </template>
     </div>
   </body>
   <script src="app.js"></script>
