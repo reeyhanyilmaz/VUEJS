@@ -13,6 +13,8 @@ createApp({
       // computed properties
       a: 0,
       b: 0,
+      //css
+      activity: true,
     };
   },
   //   function

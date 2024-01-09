@@ -6,6 +6,8 @@
     <title>VUE JS</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- CDN ile -->
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app">
@@ -62,6 +64,16 @@
       <!-- methods ile yapsaydık "aYaEkle()" bu sekilde yazılacaktı -->
       <p>Yaş+ A = {{ aYaEkle }}</p>
       <p>Yaş+ B = {{ bYeEkle }}</p>
+
+      <!-- ******************  CSS ****************** -->
+      <hr />
+      <h1>CSS</h1>
+      <div v-bind:class="{red: true, blue: true}"></div>
+      <div v-on:click="activity = !activity" v-bind:class="{active: activity}">
+        <!-- true ise class görünüyor false ise görünmüyor -->
+        <!-- on click'de bir func islemi, class'da deger verildi ve {} icine yazilmali -->
+        <span>Bu alanın içeriğidir. </span>
+      </div>
     </div>
   </body>
   <script src="app.js"></script>
